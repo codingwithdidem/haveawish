@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import firebaseClient from '../firebase/client';
 
@@ -15,7 +16,7 @@ const User: React.FC<UserProps> = ({ id }) => {
 
   return (
     <div className="flex space-x-2 items-center">
-      <img
+      <Image
         src={value.data().photoURL}
         className="ml-2 w-12 h-12 rounded-full"
       />
